@@ -1,0 +1,210 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+   - Hi
+   - Hello
+   - Hey there
+   - Greetings
+   - Good morning
+   - Good Afternoon
+   - What's up
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Thank You
+    - TQ
+    - Sure
+    - Goodbye
+    - See you later
+    - Have a great day
+    - Farewell
+    - Take care
+    - Until next time
+
+- intent: course_info
+  examples: |
+    - List of available [courses](course)?
+    - What [courses](course) do you offer?
+    - Tell me about your [course](course) offerings
+    - Available [courses](course)
+    - [Courses](course) provided
+    - [courses](course) offered
+    - Information about [course](course) curriculum
+
+- intent: course_schedule
+  examples: |
+    - Timetable for [Power BI](course)
+    - What is the [Data Visualization](course) class schedule?
+    - [Course](course) [syllabus](course)
+    - What is the schedule for the [IMAGE GRAPHICS](course) program?
+    - Upcoming [course](course) lectures
+    - [Syllabus](course) details
+    - Next lecture information
+
+- intent: fees_info
+  examples: |
+    - Details about [fees](fees)
+    - Information on tuition [fees](fees)
+    - [Fees](fees) structure
+    - [Fees](fees) for specific courses
+    - [Fees](fees) payment process
+
+- intent: elearning_platform
+  examples: |
+    - How to access the e-learning platform?
+    - Steps to log in to the e-learning website
+    - E-learning platform navigation
+    - Features of the e-learning system
+    - Online learning resources
+    - Accessing study materials
+    - E-learning tools and technology
+    - User account information
+
+- intent: support
+  examples: |
+    - How to get support?
+    - Contact information for support
+    - Helpdesk for e-learning issues
+    - Technical assistance
+    - Reporting problems with the e-learning website
+    - Assistance with account issues
+
+- intent: platform_hours
+  examples: |
+    - E-learning platform operating hours
+    - When is the e-learning website accessible?
+    - Support availability hours
+    - Platform maintenance schedule
+    - Technical support hours
+
+
+- intent: enroll_course
+  examples: |
+    - How can I enroll in the [ML](course) program?
+    - Process for enrolling in [course](course)
+    - Enrollment steps for [course](course) in your college
+    - What is the procedure to enroll in [courses](course)?
+    - How to register for [course](course)?
+
+
+- intent: tech_support
+  examples: |
+    - Need technical [support](tech_support)
+    - How to contact technical [support](tech_support)
+    - Technical [support](tech_support) for e-learning platform issues
+    - Assistance with [technical problems](tech_support)
+    - Where can I find [tech support](tech_support)?
+
+- intent: contact_info
+  examples: |
+    - What is the [contact information](contact_info) for the doubts?
+    - How can I [contact](contact_info) the e-learning support center?
+    - Where can I find the [contact details](contact_info) for the e-learning facility?
+    - Contact [information](contact_info) for inquiries
+
+- intent: course_details
+  examples: |
+    - More details about the [Data Science](course) program
+    - In-depth information about [course](course) curriculum
+    - Can you provide details about the [Python Programming](course) course?
+    - Tell me more about the [Machine Learning](course) program
+    - What are the specifics of the [Web Development](course) curriculum?
+    - Provide detailed information on the [Artificial Intelligence](course) course
+    - I'm interested in learning more about the [Data Analytics](course) program
+    - Can you give me an overview of the [Cybersecurity](course) course?
+    - Elaborate on the [course](course) content and topics covered
+    - Tell me about the [course](course) structure and modules
+
+
+- intent: registration_deadline
+  examples: |
+    - When is the registration deadline for [courses](course)?
+    - Last date to register for [course](course)
+    - Registration deadline for [IoT](course) program
+
+- intent: exam_schedule
+  examples: |
+    - When is the upcoming exam for [course](course)?
+    - [Exam schedule](exam_schedule) for [Big Data](course) program
+    - When are the final exams for [courses](course)?
+
+- intent: grades
+  examples: |
+    - How can I check my [grades](grades)?
+    - Accessing [grades](grades) online
+    - View [grades](grades) for [Deep Learning](course) courses
+    - When will [grades](grades) be available?
+
+- intent: certification
+  examples: |
+    - How can I obtain a [certificate](certification) after completing the course?
+    - Tell me about the process for receiving a course completion [certification](certification)
+    - Do participants receive [certificates](certification) upon finishing the course?
+    - Explain the steps for obtaining a [certificate](certification) for course completion
+    - Is there a fee associated with obtaining the course completion [certification](certification)?
+    - What are the requirements for receiving a [certificate](certification) for the course?
+    - Are the [certificates](certification) provided digitally or in print?
+    - Can I showcase the course completion [certificate](certification) on my LinkedIn profile?
+    - Tell me more about the design and format of the course completion [certificates](certification)
+    - Are there any specific criteria for eligibility for the course completion [certification](certification)?
+
+- intent: library_access
+  examples: |
+    - How to access the online library for study materials?
+    - Online [library access](library_access) details
+    - Library resources for [courses](course)
+
+- intent: Recordings
+  examples: |
+    - Are lectures recorded?
+    - Can I access recorded lectures later?
+    - Where can I find the recorded lectures?
+    - How do I access the recorded content?
+    - Can I access recorded lectures for [course](course) later?
+
+- intent: Assignments
+  examples: |
+    - When are assignments due?
+    - How many assignments are there in the Data Science course?
+    - How many assignments are there in the [course](course)?
+    - When is the deadline for the assignments in the [course](course)?
+    - How many assignments are there in the [course](course) and when are they due?
+    - Can you provide details about the upcoming assignment for [course](course)?
+    - What is the grading policy for assignments in the [course](course)?
+    - Tell me more about the final project requirements for [course](course).
+    - Is there any group assignment in the [course](course)?
+
+- intent: feedback
+  examples: |
+    - "I have a suggestion for the platform."
+    - "How can I give feedback?"
+    - "I'd like to share my thoughts on the course content."
+    - "Is there a feedback form for the instructors?"
+    - "Can I provide feedback on the user interface?"
+    - "I want to give feedback about the mobile app."
+    - "Where can I submit feedback about the e-learning platform?"
+    - "Are there any surveys for providing feedback?"
+    - "I have an idea to improve the learning experience."
+    - "Can I suggest new features for the platform?"
+
+- intent: progress_info
+  examples: |
+    - "Can you show me my progress in the Data Science course?"
+    - "How am I doing in my courses?"
+    - "Provide an overview of my learning progress."
+    - "What percentage of the Python course have I completed?"
+    - "Give me details about my performance in the Machine Learning module."
+    - "Can I see my grades for the assignments in the Web Development course?"
+    - "Show me the completion status of the Artificial Intelligence program."
+    - "How many quizzes have I completed in the Data Analytics course?"
+    - "What is my current standing in the course progress tracker?"
+    - "Show me the summary of my achievements and progress."
+
+- intent: Internships
+  examples: |
+    - "Is there any internship availble in this platform?"
+    - "Availablity of Internships"
+

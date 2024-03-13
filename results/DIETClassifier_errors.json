@@ -1,0 +1,212 @@
+[
+  {
+    "text": "Fees for specific courses",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "Fees",
+        "entity": "fees"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "fees",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9965665340423584,
+        "value": "fees",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "course",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.853365957736969,
+        "value": "courses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Contact information for support",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "tech_support",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.5561308860778809,
+        "value": "support",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the contact information for the doubts?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 31,
+        "value": "contact information",
+        "entity": "contact_info"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "contact_info",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.5995586514472961,
+        "value": "contact",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How can I contact the e-learning support center?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "contact",
+        "entity": "contact_info"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Where can I find the contact details for the e-learning facility?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 36,
+        "value": "contact details",
+        "entity": "contact_info"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "contact_info",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.6729857325553894,
+        "value": "contact",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Contact information for inquiries",
+    "entities": [
+      {
+        "start": 8,
+        "end": 19,
+        "value": "information",
+        "entity": "contact_info"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "View grades for Deep Learning courses",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "grades",
+        "entity": "grades"
+      },
+      {
+        "start": 16,
+        "end": 29,
+        "value": "Deep Learning",
+        "entity": "course"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "grades",
+        "start": 5,
+        "end": 11,
+        "confidence_entity": 0.9740732908248901,
+        "value": "grades",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "course",
+        "start": 16,
+        "end": 29,
+        "confidence_entity": 0.8574225306510925,
+        "value": "Deep Learning",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "course",
+        "start": 30,
+        "end": 37,
+        "confidence_entity": 0.5777339339256287,
+        "value": "courses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "\"How am I doing in my courses?\"",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "course",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.677021324634552,
+        "value": "courses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "\"Can I see my grades for the assignments in the Web Development course?\"",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "grades",
+        "start": 14,
+        "end": 20,
+        "confidence_entity": 0.8912177681922913,
+        "value": "grades",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

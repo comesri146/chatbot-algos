@@ -1,0 +1,100 @@
+rules:
+- rule: Greet 
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Inquire 
+  steps:
+  - intent: course_schedule
+  - action: utter_course_schedule
+
+- rule: Fees Info
+  steps:
+  - intent: fees_info
+  - action: utter_fees_info
+
+- rule: E-learning Platform
+  steps:
+  - intent: elearning_platform
+  - action: utter_elearning_platform
+
+- rule: Support
+  steps:
+  - intent: support
+  - action: utter_support
+
+- rule: Platform Operating Hours
+  steps:
+  - intent: platform_hours
+  - action: utter_platform_hours
+
+- rule: Enroll 
+  steps:
+  - intent: enroll_course
+  - action: utter_enroll_course
+
+- rule: Technical Support
+  steps:
+  - intent: tech_support
+  - action: utter_tech_support
+
+- rule: Contact Information
+  steps:
+  - intent: contact_info
+  - action: utter_contact_info
+
+- rule: Course Details
+  steps:
+  - intent: course_details
+  - action: utter_course_details
+
+- rule: Registration Deadline
+  steps:
+  - intent: registration_deadline
+  - action: utter_registration_deadline
+
+- rule: Exam Schedule
+  steps:
+  - intent: exam_schedule
+  - action: utter_exam_schedule
+
+- rule: Grades
+  steps:
+  - intent: grades
+  - action: utter_grades
+
+- rule: Certification
+  steps:
+  - intent: certification
+  - action: utter_certification
+
+- rule: Online Library
+  steps:
+  - intent: library_access
+  - action: utter_library_access
+
+- rule: Recorded Lectures
+  steps:
+  - intent: Recordings
+  - action: utter_recordings
+
+- rule: Assignment Details
+  steps:
+  - intent: Assignments
+  - action: utter_assignments
+
+- rule: Feedback
+  steps:
+  - intent: feedback
+  - action: utter_feedback
+
+- rule: Progress Info
+  steps:
+  - intent: progress_info
+  - action: utter_progress_info
+
+- rule: Internship details
+  steps:
+  - intent: Internships
+  - action: utter_Internships

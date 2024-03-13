@@ -1,0 +1,77 @@
+{
+  "certification": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "exam_schedule": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "fees": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "tech_support": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1-score": 0.9333333333333333,
+    "support": 7,
+    "confused_with": {}
+  },
+  "contact_info": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 6,
+    "confused_with": {}
+  },
+  "course": {
+    "precision": 0.9491525423728814,
+    "recall": 1.0,
+    "f1-score": 0.9739130434782608,
+    "support": 56,
+    "confused_with": {}
+  },
+  "grades": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 4,
+    "confused_with": {}
+  },
+  "library_access": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.946236559139785,
+    "recall": 0.9565217391304348,
+    "f1-score": 0.9513513513513514,
+    "support": 92
+  },
+  "macro avg": {
+    "precision": 0.9530190677966102,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9120169082125604,
+    "support": 92
+  },
+  "weighted avg": {
+    "precision": 0.9508428518791452,
+    "recall": 0.9565217391304348,
+    "f1-score": 0.9416089056920814,
+    "support": 92
+  },
+  "accuracy": 0.9891172914147521
+}

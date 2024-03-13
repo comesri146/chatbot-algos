@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>ChatBot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="Icons" href="1">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+    <h1 class="header">CHATBOT</h1>
+    <div class="btns">
+        <button class="btn aboutus" data-tooltip="Learn about us">About us</button>
+        <button class="btn updates" data-tooltip="Check for updates">Updates</button>
+        <button class="btn chatbots" data-tooltip="Interact with Chat Bot" onclick="toggleBot()">Chat Bot</button>
+        <button class="btn button4" data-tooltip="Description for Button 4">Button 4</button>
+        <button class="btn button5" data-tooltip="Description for Button 5">Button 5</button>
+    </div>
+
+    <button class="chatbot-toggler" onclick="toggleBot()">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <span class="close-btn material-symbols-outlined" onclick="toggleBot()">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there 👋<br>How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea id="user-message" placeholder="Enter a message..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded" onclick="sendMessage()">send</span>
+        </div>
+    </div>
+    <script>
+        function toggleBot() {
+            document.body.classList.toggle("show-chatbot");
+        }
+
+        function sendMessage() {
+            // Get user's message
+            var userMessage = document.getElementById('user-message').value;
+
+            // Create a new list item for the chatbox
+            var newChatItem = document.createElement('li');
+            newChatItem.className = 'chat outgoing';
+            newChatItem.innerHTML = '<span class="material-symbols-outlined">smart_toy</span><p>' + userMessage + '</p>';
+
+            // Append the new item to the chatbox
+            document.querySelector('.chatbox').appendChild(newChatItem);
+
+            // Clear the input field
+            document.getElementById('user-message').value = '';
+
+            // Send the user's message to the backend
+            sendMessageToBackend(userMessage);
+        }
+
+        function sendMessageToBackend(message) {
+            fetch('/send_message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the frontend with the bot's response
+                const botResponse = data.bot_response;
+                displayBotResponse(botResponse);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function displayBotResponse(response) {
+            // Create a new list item for the chatbox with the bot's response
+            const newChatItem = document.createElement('li');
+            newChatItem.className = 'chat incoming';
+            newChatItem.innerHTML = '<span class="material-symbols-outlined">smart_toy</span><p>' + response + '</p>';
+
+            // Append the new item to the chatbox
+            document.querySelector('.chatbox').appendChild(newChatItem);
+
+            // Scroll to the bottom to show the latest messages
+            document.querySelector('.chatbox').scrollTo(0, document.querySelector('.chatbox').scrollHeight);
+        }
+
+    </script>
+</body>
+
+</html>

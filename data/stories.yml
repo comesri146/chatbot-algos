@@ -1,0 +1,193 @@
+stories:
+- story: Greet and inquire about courses
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_info
+  - action: utter_course_info
+
+- story: Inquire about the e-learning platform
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: elearning_platform
+  - action: utter_elearning_platform
+
+- story: Request support
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: support
+  - action: utter_support
+
+- story: Ask for platform operating hours
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: platform_hours
+  - action: utter_platform_hours
+
+- story: Inquire about the location
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Enroll in a course
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enroll_course
+  - action: utter_enroll_course
+
+- story: Request technical support
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tech_support
+  - action: utter_tech_support
+
+- story: Inquire about contact information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: contact_info
+  - action: utter_contact_info
+
+- story: Ask for course details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_details
+  - action: utter_course_details
+
+- story: Check registration deadline
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: registration_deadline
+  - action: utter_registration_deadline
+
+- story: Inquire about exam schedule
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: exam_schedule
+  - action: utter_exam_schedule
+
+- story: Check grades
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: grades
+  - action: utter_grades
+
+- story: Ask about certification
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: certification
+  - action: utter_certification
+
+- story: Access online library
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: library_access
+  - action: utter_library_access
+
+- story: Say goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Greet and Inquire about Courses with Course Schedule and Fees Info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_info
+  - action: utter_course_info
+  - intent: course_schedule
+  - action: utter_course_schedule
+  - intent: fees_info
+  - action: utter_fees_info
+
+- story: Inquire about the E-learning Platform and Request Technical Support
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: elearning_platform
+  - action: utter_elearning_platform
+  - intent: tech_support
+  - action: utter_tech_support
+
+- story: Request Support and Inquire about Platform Operating Hours
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: support
+  - action: utter_support
+  - intent: platform_hours
+  - action: utter_platform_hours
+
+- story: Inquire about the Location and Enroll in a Course
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enroll_course
+  - action: utter_enroll_course
+
+- story: Inquire about Contact Information and Ask for Course Details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: contact_info
+  - action: utter_contact_info
+  - intent: course_details
+  - action: utter_course_details
+
+- story: Check Registration Deadline and Inquire about Exam Schedule
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: registration_deadline
+  - action: utter_registration_deadline
+  - intent: exam_schedule
+  - action: utter_exam_schedule
+
+- story: Check Grades, Ask about Certification, and Access Online Library
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: grades
+  - action: utter_grades
+  - intent: certification
+  - action: utter_certification
+  - intent: library_access
+  - action: utter_library_access
+
+- story: Say Goodbye with Inquiries about Recordings, Assignments, Feedback, and Progress Info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: Recordings
+  - action: utter_recordings
+  - intent: Assignments
+  - action: utter_assignments
+  - intent: feedback
+  - action: utter_feedback
+  - intent: progress_info
+  - action: utter_progress_info
+
+
+- story: Inquire about Internships
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Internships
+  - action: utter_Internships
+  - intent: tech_support
+  - action: utter_tech_support
