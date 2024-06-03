@@ -4,211 +4,451 @@ intents:
   - greet
   - goodbye
   - course_info
-  - course_schedule
-  - fees_info
-  - elearning_platform
-  - support
-  - platform_hours
-  - enroll_course
-  - tech_support
-  - contact_info
-  - course_details
-  - registration_deadline
-  - exam_schedule
-  - grades
-  - certification
-  - library_access
-  - Recordings
-  - Assignments
-  - feedback
-  - progress_info
-  - Internships
+  - web_development_topics
+  - data_science_topics
+  - mobile_development_topics
+  - programming_languages_topics
+  - game_development_topics
+  - database_design_development_topics
+  - software_testing_topics
+  - software_engineering_topics
+  - software_development_tools_topics
+  - no_code_development_topics
+  - Beginners_javascript
+  - Advance_javascript
+  - Beginners_React JS
+  - Advance_React JS
+  - Beginners_Machine Learning
+  - Advance_Machine Learning
+  - Beginners_Python
+  - Advance_Python
+  - Beginner_Google Flutter
+  - Advance_Google Flutter
+  - Beginner_Android Development
+  - Advance_Android Development
+  - Beginner_java
+  - advanced_java
+  - Beginner_C++
+  - advanced_C++
+  - Beginners_flutter_flow
+  - Advance_flutter_flow
+  - Beginners_web_design
+  - Advance_web_design
+  - Beginners_docker
+  - Advance_docker
+  - Beginners_Github
+  - Advance_Github
+  - Beginners_postman
+  - Advance_postman
+  - Beginners_api_testing
+  - Advance_api_testing
+  - Beginners_automation_testing
+  - Advance_automation_testing
+  - Beginners_data_structure
+  - Advance_data_structure
+  - Beginners_microservices
+  - Advance_microservices
+  - Beginner_MySQL
+  - Advance_MySQL
+  - Beginner_MongoDB
+  - Advance_MongoDB
+  - Beginner_2D Game Development
+  - Advance_2D Game Development
+  - Beginner_Unity
+  - Advance_Unity
+  - Fallback
+
+
+
 
 entities:
-  - course
-  - topic
-  - fees
-  - tech_support
-  - contact_info
-  - certification
+
+  - course_name:
+      type: text
+  - course_level:
+      type: text
+slots:
+   course_name:
+      type: text
+      influence_conversation: true
+      mappings:
+      - type: from_entity
+        entity: course_name
+   course_level:
+      type: text
+      influence_conversation: true
+      mappings:
+      - type: from_entity
+        entity: course_level
 
 responses:
   utter_greet:
     - text: "Hello! How can I assist you today?"
-    - text: "Hi there! What can I do for you?"
-    - text: "Hey! What's on your mind?"
-    - text: "Hello! I'm here to help you. What do you need?"
-    - text: "Hello! How can I help you today?"
 
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
   utter_goodbye:
-    - text: "Bye! If you have anyother questions, feel free to ask."
+    - text: "Bye! If you have any other questions, feel free to ask."
     - text: "See you later! Don't hesitate to return if you need help."
     - text: "Bye! It was a pleasure helping you today."
     - text: "See you later! I'm always here, ready to assist whenever you decide to return."
     - text: "Take care! Remember, I'm here to help whenever you need."
 
   utter_course_info:
-    - text: "We offer a variety of courses. You can explore them on our website."
-    - text: "Our course offerings cover a wide range of topics. Feel free to inquire about a particular course."
-    - text: "A wide selection of courses awaits you! Dive into the details on our website or reach out directly for information on specific courses you're interested in."
-    - text: "If there's a specific course you have in mind, I'm here to provide all the details you need."
-    - text: "Our courses cover areas like Data science, Artificial intelligence. Let me know if you need details on any specific one."
-    - text: "We offer courses in areas like Machine learning, Data science, Artificial intelligence, etc. Need specifics on any? I'm here to help!"
+    - text: "We offer a variety of courses like \n1.Web Development,\n2.Data Science, \n3.Programming Languages, \n4.Database Design and Development, \n5.Software Engineering, \n6.Mobile Development, \n7.Game Development, \n8.Software Testing , \n9.Software Development Tool, \n10.No-Code Development."
+      buttons:
+      - title: "Data Science"
+        payload: "/data_science_topics"
+      - title: "Web Development"
+        payload: "/web_development_topics"
+      - title: "Programming languages"
+        payload: "/programming_languages_topics"
+      - title: "Software Engineering"
+        payload: "/software_engineering_topics"
+      - title: "Database design and development"  
+        payload: "/database_design_development_topics"
 
-  utter_course_schedule:
-    - text: "The course schedule varies, but you can find detailed timetables on our website."
-    - text: "For course schedules, you can check our website."
-    - text: "Course schedules are flexible. For up-to-date timetables, please visit our website."
-    - text: "Schedules for our courses differ. Detailed timings are available on our website."
+    - text: "We offer courses in areas like \n1.Data Science, \n2.Programming Langugaes, \n3.Web Development, \n4.Database Design and Development, \n5.Software engineering, \n6.Mobile Development, \n7.Game Development, \n8.Software Testing , \n9.Software Development Tool, \n10.No-Code Development ."    
+      buttons:
+      - title: "Mobile development"
+        payload: "/mobile_development_topics"
+      - title: "Game development"
+        payload: "/game_development_topics"
+      - title: "Software testing" 
+        payload: "/software_testing_topics"  
+      - title: "Software development tools"
+        payload: "/software_development_tools_topics"   
+      - title:  " No code development"
+        payload: "/no_code_development_topics"  
+  utter_web_development_topics:
+    - text: "\nThe topics covered in our Web Development course include \n1.JavaScript, \n2.React.js, \n3.Angular, \n4.CSS, \n5.Next.js, \n6.HTML, \n7.ASP.NET Core."
+      buttons:
+      - title: "Beginners JS"
+        payload: "/Beginners_javascript"
+      - title: "Adavanced JS"  
+        payload: "/Advance_javascript"
+      - title: "Beginners React JS"
+        payload: "/Beginners_React JS"
+      - title: "Advanced React JS"
+        payload: "/Advance_React JS"
+  utter_data_science_topics:
+    - text: "\nThe topics covered in our Data Science course include \n1.Python, \n2.machine learning, \n3.deep learning, \n4.artificial intelligence, \n5.natural language processing, \n6.R programming language, \n7.data analysis."
+      buttons:
+      - title: "Beginners Python"
+        payload: "/Beginners_Python"
+      - title: "Advanced Python"
+        payload: "/Advance_Python"
+      - title: "Beginners Machine Learning"
+        payload: "/Beginners_Machine Learning"
+      - title: "Advanced Machine Learning"
+        payload: "/Advance_Machine Learning"
+     
+  utter_mobile_development_topics:
+    - text: "\nThe topics covered in our Mobile Development course include \n1.Google Flutter, \n2.Android development, \n3.iOS development, \n4.React Native, \n5.Dart programming language, \n6.Swift, Kotlin, \n7.mobile app development, \n7.SwiftUI."
+      buttons:
+      - title: "Beginner Google flutter"
+        payload: "/Beginner_Google Flutter"
+      - title: "Advanced Google flutter"
+        payload: "/Advance_Google Flutter"
+      - title: "Beginner Andriod development"
+        payload: "/Beginner_Android Development"  
+      - title: "Advanced Andriod development"
+        payload: "/Advance_Android Development"
+  
+  utter_programming_languages_topics:
+    - text: "\nThe topics covered in our Programming Languages course include \n1.Python, \n2.Java, \n3.C#, \n4.C++, \n5.React.js, \n6.Go, \n7.C, \n8.Spring Framework, \n9.JavaScript."
+      buttons:
+      - title: "Beginners Java"
+        payload: "/Beginner_java"
+      - title: "Advanced Java"
+        payload: "/advanced_java"
+      - title: "Beginners C++"
+        payload: "/Beginner_C++"  
+      - title: "Advanced C++"
+        payload: "/advanced_C++"  
+  utter_game_development_topics:
+    - text: "\nThe topics covered in our Game Development course include \n1.Unreal Engine, \n2.Unity, \n3.game development fundamentals, \n4.C# programming language, \n5.Godot, C++ programming language, \n6.3D game development, \n7.2D game development, \n8.Unreal Engine Blueprints."
+      buttons:
+      - title: "Beginners Unity"
+        payload: "/Beginner_Unity"
+      - title: "Advanced Unity"
+        payload: "/Advance_Unity"
+      - title: "Beginners 2D Game dev"
+        payload: "/Beginner_2D Game Development"  
+      - title: "Advanced 2D Game dev"
+        payload: "/Advance_2D Game Development"   
+  utter_database_design_development_topics:
+    - text: "\nThe topics covered in our Database Design and Development course include \n1.SQL, \n2.MySQL, \n3.Database Management System (DBMS) concepts, \n4.SQL Server, \n5.PostgreSQL, \n6.Apache Kafka, \n7.MongoDB, \n8.Oracle SQL, \n9.database programming."
+      buttons:
+      - title: "Beginners MYSQL"
+        payload: "/Beginner_MySQL"
+      - title: "Advanced MYSQL"
+        payload: "/Advance_MySQL"
+      - title: "Beginners "
+        payload: "/Beginner_MongoDB"  
+      - title: "Advanced MongoDB"
+        payload: "/Advance_MongoDB" 
+  utter_software_testing_topics:
+    - text: "\nThe topics covered in our Software Testing course include \n1.Selenium WebDriver, \n2.automation testing, \n3.Java programming, \n4.Postman, \n5.Microsoft Playwright, \n6.Selenium testing framework, \n7.ISTQB Certified Tester Foundation Level (CTFL), \n8.API testing."
+      buttons:
+      - title: "Beginners Automation Testing"
+        payload: "/Beginners_automation_testing"
+      - title: "Advanced Automation Testing"
+        payload: "/Advance_automation_testing"
+      - title: "Beginners API testing"
+        payload: "/Beginners_api_testing"  
+      - title: "Advanced API testing"
+        payload: "/Advance_api_testing"    
+  utter_software_engineering_topics:
+    - text: "\nThe topics covered in our Software Engineering course include \n1.data structures, \n2.algorithms, \n3.coding interview preparation, \n4.Certified Kubernetes Application Developer (CKAD) certification preparation, \n5.software architecture principles, \n6.microservices architecture, \n7.back-end web development, \n8.software engineering best practices, \n9.Java algorithms."
+      buttons:
+      - title: "Beginners Data structures"
+        payload: "/Beginners_data_structure"
+      - title: "Advanced Data structures"
+        payload: "/Advance_data_structure"
+      - title: "Beginners Microservices"
+        payload: "/Beginners_microservices"  
+      - title: "Advanced Microservices"
+        payload: "/Advance_microservices"
+  utter_software_development_tools_topics:
+    - text: "\nThe topics covered in our Software Development Tools course include \n1.Docker, \n2.Git, \n3.Kubernetes, \n4.JIRA, \n5.Prompt engineering, \n6.GitHub, \n7.Confluence, \n8.Terraform, \n9.DevOps."
+      buttons:
+      - title: "Beginners Docker"
+        payload: "/Beginners_docker"
+      - title: "Advanced Docker"
+        payload: "/Advance_docker"
+      - title: "Beginners Github"
+        payload: "/Beginners_Github"  
+      - title: "Advanced Github"
+        payload: "/Advance_Github"
+  utter_no_code_development_topics:
+    - text: "\nThe topics covered in our No-Code Development course include \n1.WordPress, \n2.Bubble visual programming, \n3.Microsoft Power Platform, \n4.Generative AI (GenAI), \n5.Microsoft Power Apps, \n6.App development, \n7.Web Design, \n8.Custom GPTs/GPT builder, \n9.Flutter Flow." 
+      buttons:
+      - title: "Beginners Web Design"
+        payload: "/Beginners_web_design"
+      - title: "Advanced Web Design"
+        payload: "/Advance_web_design"
+      - title: "Beginners Flutter flow"
+        payload: "/Beginners_flutter_flow"  
+      - title: "Advanced Flutter flow"
+        payload: "/Advance_flutter_flow"
+  utter_Beginners_javascript:
+    - text: "\n1. Javascript Basics for Beginners, \n2. Javascript: The complete Developer's Guide, \n3. Javascript Beginner Bootcamp, Learn Javascript- For Beginners, \n4. Javascript for beginners-Learn javascript from scratch, \n5. Javascript projects for javascript beginners"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_javascript:
+    - text: "\n1. Advanced javascript, \n2. Modern javascript(complete guide,from Novice to Ninja),  \n3. The complete javascript course 2024:From Zero to Expert!, \n4. Javascript-The complete Guide 2024(Beginner+Advance), \n5. Learn Pro Advanced Modern Javascript Programming, \n6. javascript:understanding the weird parts"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_React JS:
+    - text: "\n1. React basic in just 1 hour, \n2. React Front to Back, \n3. Learn to built an e-commerce store with .Net,React & Redux, \n4. complete react JS web developer with ES6, \n5. React+Redux - The beginner guide, \n6. React js.From the beginning.w/Redux and React Router."
+      buttons:
+      - title: "course list"
+        payload: "/course_info"             
+  utter_Advance_React JS:
+    - text: "\n1. Mastering React.js:Crafting PRODUCTION-grade applications, \n2. Modern dashboard using Reactjs and firebase cloud storage, \n3. The React Hooks Course"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_flutter_flow:
+    - text: "\n1. Begginers flutterflow development create your own app, \n2. flutter and firebase"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_flutter_flow:
+    - text: "\n1. Build a medical booking app, \n2. Build a supermarket app"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_web_design:
+    - text: "\n1. Complete web development with html css and java script, \n2. begginier guide to wireframe"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_web_design:
+    - text: "\n1. practical web design, \n2. Masters in ui&ux "
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_docker:
+    - text: "\n1. Docker for absolute begginer, \n2. docker for developer and devops"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_docker:
+    - text: "\n1. Docker mastery with kubernets, \n2. Docker and kubernets guide "         
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_Github:
+    - text: "\n1. Learn github actions for ci/cd, \n2. github the complete guide "
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_Github:
+    - text: "\n1. Github ultimate master classes, \n2. unleash github"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"             
+  utter_Beginners_postman:
+    - text: "\n1. postman crash course, \n2. Api testing using postman"           
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_postman:
+    - text: "\n1. Postman the complete guide, \n2. Web service using postman"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_api_testing:
+    - text: "\n1. REST assured api, \n2. Introduction to api testing"
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Advance_api_testing:
+    - text: "\n1. Complete api testing guide, \n2. crash course in api testing (full guide)"         
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_automation_testing:
+   - text: "\n1. Test automation foundation, \n2. Test automation using selinium drive"       
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_automation_testing:
+    - text: "\n1. selinium driver with python, \n2. selinium webdrive with java"     
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_data_structure:
+   - text: "\n1. learning data structures and algorithms, \n2. hands on with data structure "       
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_data_structure:
+    - text: "\n1. python for data structure, \n2. mastering the data structure with python"                   
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
+  utter_Beginners_microservices:
+   - text: "\n1. .net 8 microservices guide, \n2. design microservice architecture "       
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_microservices:
+    - text: "\n1. microservers with node js, \n2. serverless networks bootcamp"    
+      buttons:
+      - title: "course list"
+        payload: "/course_info"  
+ 
+  utter_Beginners_Machine Learning:
+   - text: "\n1. Introduction to Machine Learning for Data science, \n2. Machine Learning for Absolute Beginners-Level 1, \n3. An introduction to Machine Learning for Data Engineers, \n4. Machine Learning with javascript, \n5. Beginner Machine Learning in Python + ChatGPT prize[2024], \n6. Python for Machine Learning: The complete Beginner's course, \n7. Learn Machine Learning in 21 Days, \n8. Machine Learning: A Beginner's basic introduction, \n9. The Complete intro to Machine Learning."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_Machine Learning:
+   - text: "\n1. Complete Machine Learning Project Using YOLOv9, \n2. Machine Learning A-Z; AI,python & R+ Chat prize, \n3. Machine Learning & Deep Learning in Python & R, \n4. Machine Learning - From Basic to Advance, \n5. Mastering Data Science and Machine Learning Fundamentals, \n6. Machine Learning Practical Workout"
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginners_Python:
+   - text: "\n1. Python for Absolute Beginners, \n2. Python for Beginners with examples, \n3. Python for beginners-Learn all the basics pf python, \n4. python for Beginners, \n5. The ultimate python Basics-Bootcamp, \n6. one week python, \n7. Python complete course for python Beginners, \n8. Python programming for Beginners in Data science, \n9. Learn python: Python for Beginners, \n10. Python for beginners course In-Depth, \n11. python 101"
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_Python:
+   - text: "\n1. Learn python programming Materclass, \n2. The complete python Developer, \n3. The complete python programming course: Beginner to Advanced, \n4. Everything You Need to Program in Python, \n5. The complete python course 2024, \n6. Master class python programming for non-programmers, \n7. The complete Advanced python programming course 2024, \n8. Full python Masterclass,From a beginner to employed"
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_Google Flutter:
+   - text: "\n1. Flutter-Beginners course, \n2. Flutter Beginner tutorial-Built own App, \n3. Flutter - Animations from Zero to Hero, \n4. Dart & Flutter:The complete Developer's Guide, \n5. Learn Flutter & Dart-From Beginner to Advanced"
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_Google Flutter:
+   - text: "\n1. Flutter-Advanced course, \n2. Dart & Flutter|The complete Flutter Development course, \n3. Flutter BLoC- From zero to Hero complete course, \n4. The complete Flutter App Development course for Android,iOS, \n5. Learn Dart & Flutter for mobile Apps| create shooping App, \n6. Flutter chatbot with Gemini"
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_Android Development:
+   - text: "\n1. Beginners guide to Android App Development (Step by Step), \n2. Learn Android Programming From Scratch - Basics, \n3. Android App Development For Beginners: Make a full app!, \n4. Android N: From Beginner to Paid Professional, \n5. Android App Development with Kotlin | Beginner to Advanced."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_Android Development:
+   - text: "\n1. Android Multithreading Masterclass, \n2. Android Development: Android App Development From Scratch, \n3. Android App Development Master Course with Java | Android, \n4. The Complete Android 14 & Kotlin Development Masterclass,\n5. Android App Development Masterclass using Kotlin, \n6. Android Java Masterclass - Become an App Developer, \n7. The Comprehensive Android App Development Masterclass."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_java:
+   - text: "\n1. Learn Java Programming Crash Course, \n2. Java Course for complete Beginners with practical examples, \n3. Java for Beginners - Learn all the basics og Java, \n4. Become a junior Java Softwarw Developer, \n5. Java Basics: Learn to Code the right way, \n6. Java Programming for Complete Beginners, \n7. Java for Absolute Beginners."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"  
+  utter_advanced_java:
+   - text: "\n1. Java Best Practices for Efficient, Scalable, and Secure Code,\n2. Java Programming Masterclass: From Beginner to Expert, \n3. Java from Basics to Advanced by Concept && Coding, \n4. Learn JAVA Programming - Beginner to Master."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_C++:
+  - text: "\n1. Learn and Understand C++, \n2. The Complete Introduction to C++ Programming, \n3. Learn C++ by Creating, \n4. C++ Fundamentals: Game Programming For Beginners, \n5. Beginning Test Driven Development in C++, \n6. Practical C++: Learn C++ Basics Step by Step, \n7. Learn C++ Programming Mini Course - Power of Animation."
+    buttons:
+    - title: "course list"
+      payload: "/course_info"
+  utter_advanced_C++:
+  - text: "\n1. Beginning C++ Programming - From Beginner to Beyond, \n2. Learn C++ Programming -Beginner to Advance- Deep Dive in C++, \n3. C++: From Beginner to Expert, \n4. Learn Advanced C++ Programming, \n5. The C++20 Masterclass : From Fundamentals to Advanced, \n6. Learn Multithreading with Modern C++, \n7. Learn Advanced Modern C++."
+    buttons:
+    - title: "course list"
+      payload: "/course_info"
+  utter_Beginner_MySQL:
+  - text: "\n1.Learn MySQL - For Beginners, \n2. SQL Crash Course for beginners - Learn SQL with MySQL, \n3. Using MySQL Databases With Python, \n4. SQL for Data Analysis: Beginner MySQL Business Intelligence, \n5. MySQL Database Administration: Beginner SQL Database Design, \n6. MySQL For Beginners: Real Database Experience Real Fast, \n7. MySQL for Beginners: A Complete Training for beginnners, \n8. The Complete MySQL For Beginners."
+    buttons:
+    - title: "course list"
+      payload: "/course_info"
+  utter_Advance_MySQL:
+   - text: "\n1. The Ultimate MySQL Crash Course 2024, \n2. The Complete MySQL Developer Course, \n3. Advanced SQL: MySQL for Ecommerce & Web Analytics, \n4. Database Design and MySQL, \n5. MySQL, SQL and Stored Procedures from Beginner to Advanced, \n6. Learn Database Design with MySQL."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_MongoDB:
+   - text: "\n1. Introduction to the MongoDB, \n2. Learn MongoDB in 2 hours, \n3. MongoDB - The Complete Developer's Guide 2024."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_MongoDB:
+   - text: "\n1. The Complete MongoDB Course, \n2. The Complete Developers Guide to MongoDB, \n3. MongoDB 3.2: Professional Developer, \n4. MongoDB Administration, \n5. MongoDB : A Complete Database Administration Course."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_2D Game Development:
+   - text: "\n1. Starting 2D Game Development in Unity with C#, \n2. Jumpstart to 2D Game Development: Godot 4 for Beginners, \n3. Godot Beginner Course - Learn How To Make Games, \n4. Unity 2D Platformer Game Development Course, \n5. Complete Beginners Guide to Pixel Game Art, \n6. Learn 2D Game Environments Graphic Design For Beginners."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_2D Game Development:
+   - text: "\n1. The Ultimate 2D Game Character Design & Animation Course, \n2. Learn 2D Game Special Effect Animation in Photoshop, \n3. Create snake with Python PyGame, \n4. Unity 2D RPG: Complete Combat System, \n5. Game Development/Art - Create a 2D Action Game with Unity/C#, \n6. Make Games without Code? Master Visual Scripting in Unity!."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Beginner_Unity:
+   - text: "\n1. Visual Effects for Games in Unity - Beginner To Intermediate, \n2. The Beginner's Guide to Artificial Intelligence (Unity 2022), \n3. The Beginner's Guide to Animation in Unity (v5 to v2020+), \n4. Unity Editor Scripting - Beginner to Expert, \n5. Complete C# Unity Game Developer 2D, \n6. Learn To Create An RPG Game In Unity."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
+  utter_Advance_Unity:
+   - text: "\n1. Unity : Beginner to Advanced - Complete Course, \n2. The Ultimate Guide to Game Development with Unity (Official), \n3. Unity Game Development Build 2D & 3D Games, \n4. Complete C# Unity Game Developer 3D, \n5. Build 15 Augmented Reality (AR) apps with Unity & Vuforia, \n6. Learn Blender 3D Modeling for Unity Video Game Development, \n7. Ultimate Unity Overview (70+ Tools and Features Explained!)."
+     buttons:
+     - title: "course list"
+       payload: "/course_info"
 
-  utter_fees_info:
-    - text: "For detailed information about fees, please visit our website."
-    - text: "The fees structure can be found on our website. If you have specific questions, feel free to ask."
-    - text: "To learn more about our fee details, you're welcome to explore our website."
-    - text: "For a full breakdown of our fees, kindly refer to our website."
 
-  utter_elearning_platform:
-    - text: "Access the e-learning platform by logging in to our website. If you encounter issues, ask for help."
-    - text: "Our e-learning platform offers a user-friendly experience. You can access it by logging in on our website."
-    - text: "To pay fees, use our website for online payments or contact finance for guidance. Simple and secure."
-    - text: "Our fees structure varies by courses. For a detailed breakdown, visit our website."
-    - text: "For detailed information on fees, please consult our website. It will provide you with all the necessary details and answer any questions you might have."
+  utter_ask_rephrase:
+    - text: "I'm sorry, I didn't understand that. Can you please try rephrasing your query?"   
+      buttons:
+      - title: "course list"
+        payload: "/course_info"
 
-  utter_support:
-    - text: "If you need assistance, you can contact our support team through the helpdesk on our website or via email at support@example.com."
-    - text: "For any support-related inquiries, please reach out to our dedicated support team. They are available to assist you."
-    - text: "For support, please visit our helpdesk on the website or email us at support@example.com. We're ready to assist you with any queries."
-    - text: "To report any problems with the e-learning website, contact our support team at support@example.com or submit a ticket on our helpdesk. We're here to assist you promptly."
-    - text: "Need course help? Email academicsupport@example.com or use our website's contact form for quick assistance."
-
-  utter_platform_hours:
-    - text: "The e-learning platform is accessible 24/7. However, our support team is available during business hours for assistance."
-    - text: "The e-learning platform is generally available around the clock. Support hours may vary, so check our website for details."
-    - text: "Our e-learning platform operates 24/7, ensuring you can learn anytime. For support, refer to our website for our team's available hours."
-    - text: "You can access our e-learning platform anytime, day or night. For support team availability and hours, please visit our website for the most current information."
-    - text: "Our e-learning website is accessible 24/7, allowing you to learn at your convenience. For support hours, please check our website."
-
-  utter_enroll_course:
-    - text: "To enroll in a course, visit our website and follow the enrollment process for the desired program."
-    - text: "Enrolling in a course is easy! Just visit our website and navigate to the enrollment section for step-by-step instructions."
-    - text: "For course enrollment, simply head to our website and look for the 'Enroll Now' section to start the process for your chosen program."
-    - text: "To sign up for a course, access our website, and select the course you're interested in. The enrollment steps are clearly outlined for your convenience."
-    - text: "Register by visiting our site, selecting your course, and following the 'Enroll' prompts. Need help? Contact support!"
-    - text: "Find the course on our website, click 'Enroll', and follow the prompts. Support is available for any questions."
-
-  utter_tech_support:
-    - text: "If you're experiencing technical issues, our tech support team is ready to assist. You can reach them at techsupport@example.com."
-    - text: "Technical support is available for any issues you encounter. Contact our tech support team for prompt assistance."
-    - text: "For tech support, please email our team directly at techsupport@example.com or visit our website's 'Support' section for more contact options."
-
-  utter_contact_info:
-    - text: "For contact information, including phone numbers and email addresses, please visit our website's contact page."
-    - text: "You can find our contact information on the website. Feel free to reach out to us for any inquiries or concerns."
-    - text: "All our contact details, such as email and phone numbers, are available on the 'Contact Us' section of our website."
-    - text: "Check our 'Contact Us' page on the website for all our contact info. We're ready to help with any queries!"
-    - text: "The contact details for our e-learning facility are available on our website's 'Contact Us' page. You'll find email addresses, phone numbers, and other ways to reach us there."
-    - text: "For all inquiries, please refer to the 'Contact Us' section on our website where our email addresses and phone numbers are listed. We're eager to assist you with any questions."
-
-  utter_course_details:
-    - text: "Certainly! The [course](course) program covers a wide range of topics, including [topic](topic) and [topic](topic). The curriculum is designed to provide in-depth knowledge and practical skills."
-    - text: "The [course](course) program is comprehensive, covering areas such as [topic](topic) and [topic](topic). You can expect to gain valuable insights and hands-on experience in these subjects."
-    - text: "Our Data Science program covers Python, data visualization, big data analytics, and machine learning. It includes real-world projects and mentorship, preparing you for a career in data science."
-    - text: "Our course curriculum spans from basics to advanced topics, including theory, projects, and case studies for a well-rounded understanding. For detailed module and outcome information, check our course page or contact us."
-    - text: "The Python Programming course offers an in-depth exploration of Python, from foundational principles to advanced applications like web development and data analysis. Students will engage in hands-on projects to solidify their understanding and skills."
-    - text: "The course is structured into modules starting from basic concepts to advanced techniques, including practical applications and a capstone project for real-world experience. Each module features lectures, readings, and assignments for comprehensive learning."
-    - text: "Our Machine Learning program covers basics to advanced topics, including supervised and unsupervised learning, neural networks, deep learning, and NLP, with practical projects using Python libraries like Scikit-learn and TensorFlow. It ends with a capstone project for real-world application, preparing students for data science and AI careers."
-    - text: "Our Artificial Intelligence (AI) course covers AI fundamentals, machine learning, deep learning, NLP, robotics, real-world AI applications, and ethical considerations. It includes hands-on projects and a capstone project, using tools like TensorFlow and PyTorch, preparing students for careers in AI and related fields."
-    - text: "The course covers foundational concepts, core topics, advanced applications, real-world examples, hands-on projects, and interactive sessions. It's designed to provide a comprehensive understanding of the subject, blending theoretical knowledge with practical skills, and includes assessments for feedback and improvement."
-    - text: "Our Cybersecurity course covers the essentials of information security, threat analysis, cryptography, network and application security, incident response, and emerging tech impacts. It includes practical labs for real-world application, preparing students for roles in cybersecurity."
-    - text: "The Data Analytics program covers statistical analysis, data management, visualization, machine learning, and big data technologies, with hands-on projects for real-world experience. It prepares students for roles in analytics and business intelligence by teaching how to turn data into actionable insights."
-
-  utter_registration_deadline:
-    - text: "Registration deadlines vary for each course. Please check our website or contact our registration department for the most up-to-date information."
-    - text: "To find the registration deadline for a specific course, visit our website or get in touch with our registration team for assistance."
-    - text: "For the latest registration deadlines for our courses, please refer to the information on our website or reach out directly to our registration office for personalized support."
-    - text: "The last date to register for [course] varies. For the most accurate and current information, please visit our course page on the website or contact our registration department. They will provide you with all the details you need for timely registration."
-    - text: "To find out the registration deadline for our courses, please check the specific course details on our website or get in touch with our registration team. They'll provide you with the exact dates and any additional information you may require."
-    - text: "The registration deadlines for our courses can be found on our website under the course descriptions or by contacting our registration helpdesk for detailed information."
-
-  utter_exam_schedule:
-    - text: "The exam schedule is typically provided closer to the exam period. Keep an eye on announcements or contact the exam office for details."
-    - text: "For the upcoming exam schedule, check our website or reach out to the exam office. They will provide you with the necessary information."
-    - text: "Exam schedules are usually released as the exam period approaches. To stay updated, please monitor our website for announcements or get in touch with our exam office for the most current information."
-    - text: "The exact date for the upcoming exam in [course] will be announced closer to the exam period. For the most up-to-date information, please check the course page on our website or contact the exam office directly."
-    - text: "Final exam dates for our courses vary and will be communicated in advance. Keep an eye on our website's announcements or reach out to our exam coordination team for the specific dates related to your course."
-
-  utter_grades:
-    - text: "You can check your grades by logging in to your student portal on our website. The grades for each course are usually available after the evaluation period."
-    - text: "Access your grades through the student portal on our website. If you have any concerns, contact our academic services for assistance."
-    - text: "To view your grades, simply logging into the student portal on our website. Grades are posted following the completion of the evaluation period. For any issues or questions regarding your grades, our academic services team is here to help."
-    - text: "For online access to your grades, please sign in to the student portal provided on our website. Grades are typically posted shortly after the grading period concludes. Should you need help or have queries, our academic support services are available to assist you."
-    - text: "Grades will be posted in the student portal following the end of the evaluation period. For exact dates, please refer to the course schedule on our website or reach out to the academic services department."
-    - text: "To see your Deep Learning course grades, sign in to the student portal. They're updated post-assessment. For queries or help, contact academic support."
-
-  utter_certification:
-    - text: "Upon completing a course, you'll receive a digital certificate. You can download and showcase it on platforms like LinkedIn. The process is hassle-free, and there's no additional fee for the certificate."
-    - text: "Congratulations on completing the course! Your course completion certificate is available for download on our website. Feel free to share your achievement on social media."
-    - text: "After successfully finishing your course, a digital completion certificate will be issued to you. This certificate can be effortlessly downloaded for your use and shared across professional networks such as LinkedIn, at no extra cost."
-    - text: "To qualify for the course completion certificate, you must complete all modules, pass assessments, and meet any attendance or project requirements. Check our website or contact support for details on your specific course criteria."
-    - text: "To get your course completion certificate: complete the course, confirm your details in the student portal, download your certificate from the portal, and share your achievement."
-    - text: "Yes, you can add your course completion certificate to your LinkedIn profile under the 'Licenses & Certifications' section. It's a great way to highlight your skills and achievements to your professional network."
-    - text: "Certificates are issued digitally for convenient access and sharing. You can print the digital version if needed."
-    - text: "Yes, participants receive a digital certificate upon successfully completing the course. This certificate can be downloaded and shared to showcase your achievement and newly acquired skills."
-    - text: "No, there is no additional fee associated with obtaining the course completion certificate. It is included as part of your course enrollment and is provided digitally upon successful completion of the course requirements."
-
-  utter_library_access:
-    - text: "To access the online library for study materials, log in to the e-learning platform and navigate to the 'Library' section. There, you'll find a wealth of resources for your courses."
-    - text: "Online library access details are available on the e-learning platform. Explore the 'Library' section to find a variety of study materials and resources tailored to your courses."
-    - text: "Discover library resources for your courses by logging in to the e-learning platform. The 'Library' section provides access to a diverse collection of study materials."
-    - text: "Find all the study materials you need in the 'Library' section of our e-learning platform. Just log in and explore the wide range of resources available to support your learning journey."
-    - text: "To access our online library, simply log into the e-learning platform and click on the 'Library' tab. Here, you'll discover a vast selection of study materials and resources designed to complement your courses."
-    - text: "For online library access, sign in to the e-learning platform and navigate to the 'Library' area. You'll find an extensive collection of digital resources to aid your studies."
-
-  utter_recordings:
-    - text: "Yes, lectures are recorded for most courses. You can find the recorded lectures on the course page or the e-learning platform. Feel free to revisit them at your convenience."
-    - text: "Absolutely! Recorded lectures are available for review. Simply navigate to the course page or the e-learning platform to access the recorded content. It's a great way to reinforce your understanding of the material."
-    - text: "Definitely! For most of our courses, lectures are recorded and made available on the course page within the e-learning platform. This allows you to review the lectures whenever you need, ensuring you can learn at your own pace."
-    - text: "Recorded lectures can be found on the specific course page within our e-learning platform. Simply log in and navigate to your course to access the recordings and review the material at your convenience."
-    - text: "To access the recorded content, simply log in to the e-learning platform, navigate to your course, and look for the 'Recorded Lectures' section. There, you'll find all the recorded content available for review."
-    - text: "Yes, you can access recorded lectures for [course] at any time after they're uploaded. Just log into the e-learning platform, go to the course section, and you'll find the recordings under 'Recorded Lectures' or a similar tab for convenient review later on."
-    - text: "Sure! You can find recorded lectures in the 'Recordings' section on the course page."
-    - text: "Recorded lectures are available for each course. Check out the 'Recordings' tab on the course page."
-    - text: "To access recorded lectures, go to the 'Recordings' section on the e-learning platform."
-    - text: "Yes, lectures are recorded for most courses. You can locate them under the 'Recordings' category on the e-learning platform."
-    - text: "Absolutely! You'll find recorded lectures under the 'Recordings' tab. Feel free to revisit them at your convenience."
-
-  utter_assignments:
-    - text: "Assignment details, including deadlines and requirements, are available on the course page. Make sure to check regularly for updates and submit your assignments on time."
-    - text: "Stay updated on assignments by visiting the course page. Important information, such as due dates and guidelines, is provided to help you successfully complete your coursework. If you have any questions about specific assignments, feel free to ask."
-    - text: "Sure! You can find assignment details in the 'Assignments' section on the course page."
-    - text: "Assignments and their requirements are available under the 'Assignments' tab on the course page."
-    - text: "To access information about assignments, navigate to the 'Assignments' section on the e-learning platform."
-    - text: "Certainly! Assignments are listed under the 'Assignments' category on the course page."
-    - text: "Yes, we have assignments for each course. Check out the 'Assignments' tab for details."
-
-  utter_feedback:
-    - text: "We appreciate your feedback! You can share your thoughts through our feedback form on the website."
-    - text: "Thank you for wanting to provide feedback! Visit our website and look for the feedback section to share your thoughts with us. We value your input."
-    - text: "Feedback is important to us! Feel free to share your thoughts through our website's feedback form or by reaching out to our support team directly."
-    - text: "Your feedback matters to us! Head over to our website's feedback section or contact our support team to share your thoughts."
-    - text: "We value your feedback! You can share your thoughts through our website's feedback form or contact our support team directly."
-    - text: "Your feedback is important to us! Please take a moment to share your thoughts through our website's feedback form or by reaching out to our support team."
-
-  utter_progress_info:
-    - text: "To track your progress, log in to the student portal on our website. There, you can view grades, upcoming assignments, and any feedback from instructors."
-    - text: "Stay informed about your progress by regularly checking the student portal on our website. It provides details on grades, upcoming assignments, and feedback from instructors."
-    - text: "For real-time updates on your progress, log in to the student portal on our website. It offers a comprehensive overview of your grades, upcoming assignments, and feedback from instructors."
-    - text: "To monitor your progress, access the student portal on our website. It's a centralized hub for your grades, upcoming assignments, and feedback from instructors."
-    - text: "The student portal on our website is your go-to for progress updates. Log in to view your grades, upcoming assignments, and feedback from instructors."
-    - text: "For the latest updates on your progress, log in to the student portal on our website. There, you'll find information on grades, upcoming assignments, and feedback from instructors."
-
-  utter_default:
-    - text: "I'm sorry, I didn't quite get that. Could you please rephrase or ask another question?"
-    - text: "Apologies, I'm not sure I understand. Could you please provide more details or ask a different question?"
-    - text: "I'm here to help, but I didn't catch that. Can you please rephrase your question or provide more information?"
-    - text: "I'm sorry, but I didn't understand your request. Could you try rephrasing or asking a different question?"
-    - text: "I'm here and ready to assist, but I didn't grasp that. Could you try rephrasing your question or providing more details?"
-
-  utter_Internships:
-    - text: "Yes, Internships are available in various doamins.For specific intern you can check it out in our websites."
-    - text: "Many Internships are available in this website on various domains for different time periods."
