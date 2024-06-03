@@ -1,0 +1,693 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Greetings
+    - Good morning
+    - Good afternoon
+    - What's up
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Thank you
+    - TQ
+    - Sure
+    - Goodbye
+    - See you later
+    - Have a great day
+    - Farewell
+    - Take care
+    - Until next time
+
+- intent: course_info
+  examples: |
+    - List of available courses
+    - What are the courses do you offer?
+    - Tell me about your course offerings 
+    - Available courses
+    - Courses provided
+    - Courses offered
+    - Information about course curriculum 
+    - Courses available
+
+
+- intent: web_development_topics
+  examples: |
+    - Can you outline the topics covered in the [Web Development Course](course_name) course?
+    - What topics are included in your [Web Development](course_name) curriculum?
+    - I'm interested in the specifics of the [Web Development](course_name) course content.
+    - What are the main areas of focus in the [Web Development](course_name) course?
+    - Could you share the syllabus for the [Web Development](course_name) course?
+    - Details on the subjects taught in [Web Development](course_name)
+    - Breakdown of the [Web Development](course_name) course topics
+    - Topics in the [Web Development](course_name) course
+    - [Web development](course_name) courses
+
+- intent: data_science_topics
+  examples: |
+    - Can you outline the topics covered in the [Data Science Course](course_name) course?
+    - What topics are included in your [Data Science](course_name) curriculum?
+    - I'm interested in the specifics of the [Data Science](course_name) course content.
+    - What are the main areas of focus in the [Data Science](course_name) course?
+    - Could you share the syllabus for the [Data Science](course_name) course?
+    - Details on the subjects taught in [Data Science](course_name)
+    - Breakdown of the [Data Science](course_name) course topics
+    - Topics in the [Data Science](course_name) course
+
+- intent: mobile_development_topics
+  examples: |
+    - Can you outline the topics covered in the [Mobile Development Course](course_name) course?
+    - What topics are included in your [Mobile Development](course_name) curriculum?
+    - I'm interested in the specifics of the [Mobile Development](course_name) course content.
+    - What are the main areas of focus in the [Mobile Development](course_name) course?
+    - Could you share the syllabus for the [Mobile Development](course_name) course?
+    - Details on the subjects taught in [Mobile Development](course_name)
+    - Breakdown of the [Mobile Development](course_name) course topics
+    - Topics in the [Mobile Development](course_name) course
+
+
+- intent: programming_languages_topics
+  examples: |
+    - Can you outline the topics covered in the courses on [Programming Languages Course](course_name) course?
+    - What topics are included in your [Prog Lang Course](course_name) curriculum?
+    - I'm interested in the specifics of the [Programming Languages Course](course_name) course content.
+    - What are the main areas of focus in the [Programming Languages Course](course_name) course?
+    - Could you share the syllabus for the [Prog Lang Course](course_name) course?
+    - Details on the subjects taught in [Programming Languages Course](course_name)
+    - Breakdown of the [Programming Languages Course](course_name) course topics
+    - Topics in the [Programming Languages](course_name) course
+
+- intent: game_development_topics
+  examples: |
+    - Can you outline the topics covered in the [Game Development Course](course_name) course?
+    - What topics are included in your game development [Game Dev Course](course_name) curriculum?
+    - I'm interested in the specifics of the [Game Development Course](course_name) course content.
+    - What are the main areas of focus in the [Game Development Course](course_name) course?
+    - Could you share the syllabus for the [Game Development Course](course_name) course?
+    - Details on the subjects taught in [Game Dev Course](course_name)
+    - Breakdown of the [Game Development Course](course_name) course topics
+    - Topics in the [Game Dev](course_name) course
+    - [game development](course_name)
+    - [Game development](course_name)
+    - courses on [game development](course_name)
+
+
+- intent: database_design_development_topics
+  examples: |
+    - Can you outline the topics covered in the [DBDD Course](course_name) course?
+    - What topics are included in your [Database Design Development Course](course_name) curriculum?
+    - I'm interested in the specifics of the [Database Design Development Course](course_name) course content.
+    - What are the main areas of focus in the [Database Design Development Course](course_name) course?
+    - Could you share the syllabus for the [DBDD Course](course_name) course?
+    - Details on the subjects taught in [Database Course](course_name)
+    - Breakdown of the [Database Design](course_name) course topics
+    - Courses in the [Database Design Development Course](course_name) course
+
+- intent: software_testing_topics
+  examples: |
+    - Can you outline the topics covered in the [Software Testing Course](course_name) course?
+    - What topics are included in your [Software Testing Course](course_name) curriculum?
+    - I'm interested in the specifics of the [Software Testing Course](course_name) course content.
+    - What are the main areas of focus in the [Software Testing Course](course_name) course?
+    - Could you share the syllabus for the [Software Testing Course](course_name) course?
+    - Details on the subjects taught in [Software Testing Course](course_name)
+    - Breakdown of the [Software Testing Course](course_name) course topics
+    - Topics in the [Software Testing](course_name) course
+    - [software testing](course_name)
+    - [Software testing](course_name)
+
+
+
+- intent: software_engineering_topics
+  examples: |
+    - Can you outline the topics covered in the [Software Engineering Course](course_name) course?
+    - What topics are included in your [S/W Eng Course](course_name) curriculum?
+    - I'm interested in the specifics of the [Software Engineering Course](course_name) course content.
+    - What are the main areas of focus in the [Software Engineering Course](course_name) course?
+    - Could you share the syllabus for the [S/W Eng Course](course_name) course?
+    - Details on the subjects taught in [Software Engineering](course_name)
+    - Breakdown of the [S/W Eng Course](course_name) course topics
+    - Topics in the [Software Engineering Course](course_name) course
+
+- intent: software_development_tools_topics
+  examples: |
+    - Can you outline the topics covered in the [S/W Dev Tools Course](course_name) course?
+    - What topics are included in your [Software Development Course](course_name) curriculum?
+    - Details on the subjects taught in [Software Development Tools Course](course_name)
+    - Breakdown of the [Software Development Tools Course](course_name) course topics
+    - Topics in [S/W Dev Tools Course](course_name) course
+    - Breakdown of the [Software Development Tools](course_name)
+    - [software development](course_name)
+    - [Software development](course_name)
+
+- intent: no_code_development_topics
+  examples: |
+    - Can you outline the topics covered in the [No-Code Development Courses](course_name) course?
+    - What topics are included in your [No-Code Dev](course_name) curriculum?
+    - Could you share the syllabus for the [No-Code Development](course_name) course?
+    - Details on the subjects taught in [No-Code Development](course_name)
+    - Breakdown of the [No-Code Dev](course_name) course topics
+    - Topics in the [No-Code Development](course_name) course
+
+
+- intent: Beginners_javascript
+  examples: |
+    - [Beginners](course_level) course for [JavaScript](course_name)?
+    - suggest some [beginners](course_level) course for [JavaScript](course_name)?
+    - course availability for [beginners](course_level) [JavaScript](course_name)?
+    - Where can I find a [JavaScript](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [JavaScript](course_name) course.
+    - Looking for a basic [JavaScript](course_name) tutorial for starters.
+    - Need a starter course on [JavaScript](course_name).
+    - List the [beginner](course_level) in [JavaScript](course_name)
+    - [java script](course_name)
+    - [Java Script](course_name)
+    - [javascript](course_name)
+    - [js](course_name)
+    - [JS](course_name)
+
+- intent: Advance_javascript
+  examples: |
+    - [Advanced](course_level) course for [JavaScript](course_name)?
+    - suggest some [advance](course_level) course for [JavaScript](course_name)?
+    - course availability for [advance](course_level) [JavaScript](course_name)?
+    - Where can I find a [JavaScript](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [JavaScript](course_name) course.
+    - Looking for in-depth [JavaScript](course_name) training for professionals.
+    - Are there any expert-level [JavaScript](course_name) courses?
+
+- intent: Beginners_React_JS
+  examples: |
+    - [Beginners](course_level) course for [ReactJS](course_name)?
+    - suggest some [beginners](course_level) course for [ReactJS](course_name)?
+    - course availability for [Beginners](course_level) [ReactJS](course_name)?
+    - Where can I find a [ReactJS](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [ReactJS](course_name) course?
+    - Looking for a basic [ReactJS](course_name) tutorial for starters?
+    - Need a starter course on [ReactJS](course_name)?
+    - List the [beginner](course_level) in [ReactJS](course_name)?
+    - [reactjs](course_name)
+    - [React js](course_name)
+    - [Reactjs](course_name)
+
+- intent: Advance_React_JS
+  examples: |
+    - [Advanced](course_level) course for [ReactJS](course_name)?
+    - suggest some [advance](course_level) course for [ReactJS](course_name)?
+    - course availability for [advance](course_level) [ReactJS](course_name)?
+    - Where can I find a [ReactJS](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [ReactJS](course_name) course.
+    - Looking for in-depth [ReactJS](course_name) training for professionals.
+    - Are there any expert-level [ReactJS](course_name) courses?
+
+- intent: Beginners_flutter_flow
+  examples: |
+    - Courses for [beginners](course_level) in [FlutterFlow](course_name)?
+    - What are the [basic](course_level) courses in [FlutterFlow](course_name)?
+    - List the [beginner-level](course_level) courses in [FlutterFlow](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [FlutterFlow](course_name)?
+    - course availability for [Beginners](course_level) [FlutterFlow](course_name)?
+    - Where can I find a [FlutterFlow](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [FlutterFlow](course_name) course?
+    - Looking for a basic [FlutterFlow](course_name) tutorial for starters?
+    - Need a starter course on [FlutterFlow](course_name)?
+    - [flutterflow](course_name)
+    - [Flutterflow](course_name)
+    - [FlutterFlow](course_name)
+
+- intent: Advance_flutter_flow
+  examples: |
+    - [Advanced](course_level) courses in [FlutterFlow](course_name)?
+    - What are the [advanced](course_level) courses available in [FlutterFlow](course_name)?
+    - List the [master-level](course_level) courses in [FlutterFlow](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [FlutterFlow](course_name)?
+    - course availability for [advance](course_level) [FlutterFlow](course_name)?
+    - Where can I find a [FlutterFlow](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [FlutterFlow](course_name) course.
+    - Looking for in-depth [FlutterFlow](course_name) training for professionals.
+    - Are there any expert-level [FlutterFlow](course_name) courses?
+
+- intent: Beginners_web_design
+  examples: |
+    - Courses for [beginners](course_level) in [web design](course_name)?
+    - What are the [basic](course_level) courses in [Web Design](course_name)?
+    - List the [beginner-level](course_level) courses in [web design](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [web design](course_name)?
+    - course availability for [Beginners](course_level) [web design](course_name)?
+    - Where can I find a [web design](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [web design](course_name) course?
+    - Looking for a basic [web design](course_name) tutorial for starters?
+    - Need a starter course on [web design](course_name)?
+
+- intent: Advance_web_design
+  examples: |
+    - [Advanced](course_level) courses in [web design](course_name)?
+    - What are the [master-level](course_level) courses in [web design](course_name)?
+    - List the [advanced](course_level) courses in [Web design](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [Web Design](course_name)?
+    - course availability for [advance](course_level) [web design](course_name)?
+    - Where can I find a [Web design](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [web design](course_name) course.
+    - Looking for in-depth [web design](course_name) training for professionals.
+    - Are there any expert-level [web design](course_name) courses?
+
+
+- intent: Beginners_docker
+  examples: |
+    - Courses for [beginners](course_level) in [Docker](course_name)?
+    - What are the [basic](course_level) courses in [Docker](course_name)?
+    - List the [beginner-level](course_level) courses in [Docker](course_name)?
+    - Can you suggest some courses for [beginners](course_level) in [Docker](course_name)?
+    - Docker courses
+    - course availability for [Beginners](course_level) [Docker](course_name)?
+    - Where can I find a [Docker](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [Docker](course_name) course?
+    - Looking for a basic [Docker](course_name) tutorial for starters?
+    - Need a starter course on [Docker](course_name)?
+
+- intent: Advance_docker
+  examples: |
+    - [Advanced](course_level) courses in [Docker](course_name)?
+    - What are the [advanced](course_level) courses in [Docker](course_name)?
+    - List the [advanced-level](course_level) courses in [Docker](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [Docker](course_name)?
+    - course availability for [advance](course_level) [Docker](course_name)?
+    - Where can I find a [Docker](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [Docker](course_name) course.
+    - Looking for in-depth [Docker](course_name) training for professionals.
+    - Are there any expert-level [Docker](course_name) courses?
+
+- intent: Beginners_Github
+  examples: |
+    - Courses for [beginners](course_level) in [GitHub](course_name)?
+    - What are the [basic](course_level) courses in [GitHub](course_name)?
+    - List the [beginner-level](course_level) courses in [GitHub](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [GitHub](course_name)?
+    - course availability for [Beginners](course_level) [GitHub](course_name)?
+    - Where can I find a [GitHub](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [GitHub](course_name) course?
+    - Looking for a basic [GitHub](course_name) tutorial for starters?
+    - Need a starter course on [GitHub](course_name)?
+    - [github](course_name)
+    - [Github](course_name)
+    - [GitHub](course_name)
+
+- intent: Advance_Github
+  examples: |
+    - [Advanced](course_level) courses in [GitHub](course_name)?
+    - What are the [advanced](course_level) courses in [GitHub](course_name)?
+    - List the [advanced-level](course_level) courses in [GitHub](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [GitHub](course_name)?
+    - course availability for [advance](course_level) [GitHub](course_name)?
+    - Where can I find a [GitHub](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [GitHub](course_name) course.
+    - Looking for in-depth [GitHub](course_name) training for professionals.
+    - Are there any expert-level [GitHub](course_name) courses?
+
+- intent: Beginners_postman
+  examples: |
+    - Courses for [beginners](course_level) in [Postman](course_name)?
+    - What are the [basic](course_level) courses in [Postman](course_name)?
+    - List the [beginner-level](course_level) courses in [Postman](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [Postman](course_name)?
+    - course availability for [Beginners](course_level) [Postman](course_name)?
+    - Where can I find a [Postman](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [Postman](course_name) course?
+    - Looking for a basic [Postman](course_name) tutorial for starters?
+    - Need a starter course on [Postman](course_name)?
+    - [postman](course_name)
+     -[Postman](course_name)
+
+- intent: Advance_postman
+  examples: |
+    - [Advanced](course_level) courses in [Postman](course_name)?
+    - What are the [advanced](course_level) courses in [Postman](course_name)?
+    - List the [advanced-level](course_level) courses in [Postman](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [Postman](course_name)?
+    - course availability for [advance](course_level) [Postman](course_name)?
+    - Where can I find a [Postman](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [Postman](course_name) course.
+    - Looking for in-depth [Postman](course_name) training for professionals.
+    - Are there any expert-level [Postman](course_name) courses?
+
+- intent: Beginners_api_testing
+  examples: |
+    - Courses for [beginners](course_level) in [API testing](course_name)?
+    - What are the [basic](course_level) courses in [API testing](course_name)?
+    - List the [beginner-level](course_level) courses in [API testing](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [API testing](course_name)?
+    - course availability for [Beginners](course_level) [API testing](course_name)?
+    - Where can I find a [API testing](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [API testing](course_name) course?
+    - Looking for a basic [API testing](course_name) tutorial for starters?
+    - Need a starter course on [API testing](course_name)?
+    - [api testing](course_name)
+    - [API Testing](course_name)
+
+
+- intent: Advance_api_testing
+  examples: |
+    - [Advanced](course_level) courses in [API testing](course_name)?
+    - What are the [advanced](course_level) courses in [API testing](course_name)?
+    - List the [advanced-level](course_level) courses in [API testing](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [API testing](course_name)?
+    - course availability for [advance](course_level) [API testing](course_name)?
+    - Where can I find a [API testing](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [API testing](course_name) course.
+    - Looking for in-depth [API testing](course_name) training for professionals.
+    - Are there any expert-level [API testing](course_name) courses?
+
+- intent: Beginners_automation_testing
+  examples: |
+    - Courses for [beginners](course_level) in [automation testing](course_name)?
+    - What are the [basic](course_level) courses in [automation testing](course_name)?
+    - List the [beginner-level](course_level) courses in [automation testing](course_name)?
+    - Can you suggest some courses for [beginners](course_level) in [automation testing](course_name)?
+    - course availability for [Beginners](course_level) [automation testing](course_name)?
+    - Where can I find a [automation testing](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [automation testing](course_name) course?
+    - Looking for a basic [automation testing](course_name) tutorial for starters?
+    - Need a starter course on [automation testing](course_name)?
+    - [automation testing](course_name)
+    - [Automation testing](course_name)
+
+
+- intent: Advance_automation_testing
+  examples: |
+    - [Advanced](course_level) courses in [automation testing](course_name)?
+    - What are the [advanced](course_level) courses in [automation testing](course_name)?
+    - List the [advanced-level](course_level) courses in [automation testing](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [automation testing](course_name)?
+    - course availability for [advance](course_level) [automation testing](course_name)?
+    - Where can I find a [automation testing](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [automation testing](course_name) course.
+    - Looking for in-depth [automation testing](course_name) training for professionals.
+    - Are there any expert-level [automation testing](course_name) courses?
+
+- intent: Beginners_data_structure
+  examples: |
+    - Courses for [beginners](course_level) in [data structure](course_name)?
+    - What are the [basic](course_level) courses in [data structure](course_name)?
+    - List the [beginner-level](course_level) courses in [data structure](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [data structure](course_name)?
+    - Where can I find a [data structure](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [data structure](course_name) course.
+    - Looking for a basic [data structure](course_name) tutorial for starters.
+    - Need a starter course on [data structure](course_name).
+    - List the [beginner](course_level) in [data structure](course_name)
+
+- intent: Advance_data_structure
+  examples: |
+    - [Advanced](course_level) courses in [data structure](course_name)?
+    - What are the [advanced](course_level) courses in [data structure](course_name)?
+    - List the [advanced-level](course_level) courses in [data structure](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [data structure](course_name)?
+    - course availability for [advance](course_level) [data structure](course_name)?
+    - Where can I find a [data structure](course_name) course for advance?
+    - I'm new to programming, recommend an advanced [data structure](course_name) course.
+    - Looking for in-depth [data structure](course_name) training for professionals.
+    - Are there any expert-level [data structure](course_name) courses?
+
+- intent: Beginners_microservices
+  examples: |
+    - Courses for [beginners](course_level) in [microservices](course_name)?
+    - What are the [basic](course_level) courses in [Microservices](course_name)?
+    - List the [beginner-level](course_level) courses in [microservices](course_name)?
+    - Can you suggest some [courses](course_level) for [beginners](course_level) in [Microservices](course_name)?
+    - Where can I find a [microservices](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [Microservices](course_name) course.
+    - Looking for a basic [Microservices](course_name) tutorial for starters.
+    - Need a starter course on [Microservices](course_name).
+    - List the [beginner](course_level) in [microservices](course_name)
+    - [microservices](course_name)
+    - [microservice](course_name)
+    - [Microservice](course_name)
+
+
+
+- intent: Advance_microservices
+  examples: |
+    - [Advanced](course_level) courses in [microservices](course_name)?
+    - What are the [advanced](course_level) courses in [Microservices](course_name)?
+    - List the [advanced-level](course_level) courses in [Microservices](course_name)?
+    - Could you suggest some [advanced](course_level) courses in [Microservices](course_name)?
+    - course availability for [advance](course_level) [microservices](course_name)?
+    - Where can I find a [microservices](course_name) course for advance?
+    - I'm new to programming, recommend an advance [Microservices](course_name) course.
+    - Looking for in-depth [microservices](course_name) training for professionals.
+    - Are there any expert-level [microservices](course_name) courses?
+
+- intent: Beginners_Machine_Learning
+  examples: |
+    - [Beginners](course_level) course for [Machine Learning](course_name)?
+    - suggest some [beginners](course_level) course for [ML](course_name)?
+    - course availability for [Beginners](course_level) [ML](course_name)?
+    - Looking for a basic [ML](course_name) tutorial for starters.
+    - List the [beginner](course_level) in [machine learning](course_name)
+    - [ML courses](course_name) for [beginners](course_level)
+    - Need a starter course on [ML](course_name).
+    - What are the prerequisites for the [ml](course_name) beginner course?
+    - Can you recommend a beginner [machine learning](course_name) program?
+    - [ML](course_name) courses available
+    - [ml](course_name) courses
+    - give some [ML](course_name) courses
+    - [machine learning](course_name)
+    - [Machine Learning](course_name)
+    - [Machinelearning](course_name)
+    - [MachineLearning](course_name)
+
+- intent: Advance_Machine_Learning
+  examples: |
+    - [Advance](course_level) course for [Machine Learning](course_name)?
+    - suggest some [advance](course_level) course for [Machine learning](course_name)?
+    - course availability for [advance](course_level) [ML](course_name)?
+    - Looking for in-depth [machine learning](course_name) training for professionals.
+    - List the [advance](course_level) in [ml](course_name)
+    - [ML courses](course_name) for [advanced](course_level)
+    - Are there any expert-level [ML](course_name) courses?
+    - Can you provide information on the syllabus for the advanced [ML](course_name) course?
+    - What are the main topics covered in the [advanced](course_level) [machine learning](course_name) program?
+    - courses on [advanced](course_level) [ML](course_name)
+    - [advance](course_level) courses on [ml](course_level)
+
+
+
+- intent: Beginners_Python
+  examples: |
+    - [Beginners](course_level) course for [Python](course_name)?
+    - suggest some [beginners](course_level) course for [python](course_name)?
+    - course availability for [Beginners](course_level) [Python](course_name)?
+    - [Py courses](course_name) for [beginners](course_level)
+    - [python](course_name) courses
+    - [python](course_name)
+    - python
+    - courses on [python](course_name)
+
+
+- intent: Advance_Python
+  examples: |
+    - [Advance](course_level) course for [Python](course_name)?
+    - suggest some [advance](course_level) course for [python](course_name)?
+    - course availability for [advance](course_level) [Python](course_name)?
+    - Are there any expert-level [py](course_name) courses?
+    - [advance](course_level)[python](course_name)
+
+
+- intent: Beginner_Google_Flutter
+  examples: |
+    - [Beginners](course_level) course for [Google Flutter](course_name)?
+    - suggest some [beginners](course_level) course for [Google Flutter](course_name)?
+    - course availability for [Beginners](course_level) [Google Flutter](course_name)?
+    - Where can I find a [Google Flutter](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [Google Flutter](course_name) course.
+    - Looking for a basic [Google Flutter](course_name) tutorial for starters.
+    - Need a starter course on [Google Flutter](course_name).
+    - List the [beginner](course_name) in [Google Flutter]
+
+- intent: Advance_Google_Flutter
+  examples: |
+    - [Advance](course_level) course for [Google Flutter](course_name)?
+    - suggest some [advance](course_level) course for [Google Flutter](course_name)?
+    - course availability for [advance](course_level) [Google Flutter](course_name)?
+    - Where can I find an [Advance Google Flutter](course_name) course?
+    - I'm new to programming, recommend an advance [Google Flutter](course_name) course.
+    - Looking for in-depth [Google Flutter](course_name) training for professionals.
+    - Are there any expert-level [Google Flutter](course_name) courses?
+    - List the [advance](course_name) in [Google Flutter]?
+
+- intent: Beginner_Android_Development
+  examples: |
+    - [Beginners](course_level) course for [Android Development](course_name)?
+    - suggest some [beginners](course_level) course for [Android development](course_name)?
+    - course availability for [Beginners](course_level) [Android Development](course_name)?
+    - Where can I find an [Android Development](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [Android Development](course_name) course.
+    - Looking for a basic [Android Development](course_name) tutorial for starters.
+    - Need a starter course on [Android development](course_name).
+    - List the [beginner](course_name) courses in [Android Dev](course_name)
+    - [android development](course_name)
+    - [Android deelopment](course_name)
+
+
+- intent: Advance_Android_Development
+  examples: |
+    - [Advance](course_level) course for [Android Development](course_name)?
+    - suggest some [advance](course_level) course for [Android development](course_name)?
+    - course availability for [advance](course_level) [Android Development](course_name)?
+    - Where can I find an [Android Development](course_name) course for advance?
+    - I'm new to programming, recommend an advance [Android Development](course_name) course.
+    - Looking for in-depth [Android Development](course_name) training for professionals.
+    - Are there any expert-level [Android Development](course_name) courses?
+    - List the [advance](course_name) courses in [Android Dev]
+
+- intent: Beginner_java
+  examples: |
+    - [Beginners](course_level) course for [Java](course_name)?
+    - suggest some [beginners](course_level) course for [Java](course_name)?
+    - course availability for [Beginners](course_level) [Java](course_name)?
+    - Where can I find a [Java](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [Java](course_name) course.
+    - Looking for a basic [Java](course_name) tutorial for starters.
+    - Need a starter course on [Java programming](course_name).
+    - List the [beginner](course_name) courses in [java](course_name)
+    - [java](course_name)
+    - [Java](course_name)
+
+- intent: Advanced_java
+  examples: |
+    - [Advanced](course_level) courses in [Java Development](course_name)?
+    - Recommend an advanced course in [Java](course_name)?
+    - Where to find [Java](course_name) courses for experienced developers?
+    - Advanced tutorials for [Java programming](course_name) needed.
+    - Looking for in-depth [Java](course_name) training for professionals.
+    - Seeking high-level [Java](course_name) guides and tutorials.
+    - Are there any expert-level [Java](course_name) courses?
+    - List the [advanced](course_name) courses in [java]
+
+- intent: Beginner_C++
+  examples: |
+    - [Beginners](course_level) course for [C++](course_name)?
+    - suggest some [beginners](course_level) course for [C++](course_name)?
+    - course availability for [Beginners](course_level) [C++](course_name)?
+    - Where can I find a [C++](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [C++](course_name) course.
+    - Looking for a basic [C++](course_name) tutorial for starters.
+    - List the [beginner](course_level) courses in [C++]
+    - [c++](course_name)
+    - [C++](course_name)
+
+
+- intent: Advanced_C++
+  examples: |
+    - [Advanced](course_level) courses in [C++](course_name)?
+    - Recommend an advanced course in [C++](course_name)?
+    - Where to find [C++](course_name) courses for experienced developers?
+    - Advanced tutorials for [C++ programming](course_name) needed.
+    - Seeking high-level [C++](course_name) guides and tutorials.
+    - Are there any expert-level [C++](course_name) courses?
+    - List the [advanced](course_level) courses in [C++](course_name)
+
+- intent: Beginner_MySQL
+  examples: |
+    - [Beginners](course_level) course for [MySQL](course_name)?
+    - suggest some [beginners](course_level) course for [MySQL](course_name)?
+    - course availability for [Beginners](course_level) [MySQL](course_name)?
+    - Where can I find a [MySQL](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [MySQL](course_name) course.
+    - Looking for a basic [MySQL](course_name) tutorial for starters.
+    - List the [beginner](course_level) courses in [Mysql](course_name)
+    - [mysql](course_name)
+    - [MySql](course_name)
+
+- intent: Advance_MySQL
+  examples: |
+    - [Advanced](course_level) courses in [MySQL](course_name)?
+    - Recommend an advanced course in [MySQL](course_name)?
+    - Where to find [MySQL](course_name) courses for experienced developers?
+    - Advanced tutorials for [mysql](course_name) needed.
+    - Seeking high-level [MySQL](course_name) guides and tutorials.
+    - Are there any expert-level [MySql](course_name) courses?
+    - List the [advanced](course_level) in [MySQL](course_name)
+
+- intent: Beginner_MongoDB
+  examples: |
+    - [Beginners](course_level) course for [MongoDB](course_name)?
+    - suggest some [beginners](course_level) course for [MongoDB](course_name)?
+    - course availability for [Beginners](course_level) [MongoDB](course_name)?
+    - Where can I find a [MongoDB](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [mongodb](course_name) course.
+    - Looking for a basic [Mongodb](course_name) tutorial for starters.
+    - List the [beginner](course_level) in [MongoDB](course_name)
+    - [mongodb](course_name)
+    - [MongoDB](course_name)
+    - [Mongodb](course_name)
+
+- intent: Advance_MongoDB
+  examples: |
+    - [Advanced](course_level) courses in [MongoDB](course_name)?
+    - Recommend an advanced course in [MongoDB](course_name)?
+    - Where to find [mongoDB](course_name) courses for experienced developers?
+    - Advanced tutorials for [MongoDB](course_name) needed.
+    - Seeking high-level [Mongodb](course_name) guides and tutorials.
+    - Are there any expert-level [MongoDB](course_name) courses?
+    - List the [advanced](course_level) in [mongodb]
+
+- intent: Beginner_2D_Game_Development
+  examples: |
+    - [Beginners](course_level) course for [2D Game Development](course_name)?
+    - suggest some [beginners](course_level) course for [2D game development](course_name)?
+    - course availability for [Beginners](course_level) [2D Game development](course_name)?
+    - Where can I find a [2D Game Dev](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's [2D Game dev](course_name) course.
+    - Looking for a basic [2D game Dev](course_name) tutorial for starters.
+    - List the [beginner](course_name) in [2D game dev](course_name)
+    - [2d game development](course_name)
+    - [2D Game development](course_name)
+
+
+- intent: Advance_2D_Game_Development
+  examples: |
+    - [Advanced](course_level) courses in [2D Game Development](course_name)?
+    - Recommend an advanced course in [2D game development](course_name)?
+    - Where to find [2D Game development](course_name) courses for experienced developers?
+    - Advanced tutorials for [2D Game Development](course_name) needed.
+    - Seeking high-level [2D Game Dev](course_name) guides and tutorials.
+    - Are there any expert-level [2D Game Dev](course_name) courses?
+    - List the [advanced](course_name) in [2D game dev]
+
+- intent: Beginner_Unity
+  examples: |
+    - [Beginners](course_level) course for [Unity](course_name)?
+    - suggest some beginners(course_level) course for [Unity](course_name)?
+    - course availability for Beginners(course_level) [unity](course_name)?
+    - Where can I find a [Unity](course_name) course for beginners?
+    - I'm new to programming, recommend a beginner's(course_level) [Unity](course_name) course
+    - Looking for a basic(course_level) [Unity](course_name) tutorial for starters
+    - List the [beginner](course_level) in [unity](course_name)
+    - [Unity](course_name)
+    - [unity](course_name)
+
+
+- intent: Advance_Unity
+  examples: |
+    - [Advanced](course_level) [Unity](course_name) courses?
+    - Recommend an [advanced](course_level) course in [Unity](course_name)?
+    - Where to find [unity](course_name) courses for [experienced](course_level) developers?
+    - [Advanced](course_level) tutorials for [Unity](course_name) needed.
+    - Seeking [high-level](course_level) [unity](course_name)guides and tutorials.
+    - Are there any [expert-level](course_level) [Unity](course_name) courses?
+    - List the [advanced](course_name) in [Unity]
+
+- intent: Fallback
+  examples: |
+    - ml
+    - py
+    - swift
+    - C
+    - No Sql
